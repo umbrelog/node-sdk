@@ -1,6 +1,6 @@
 {
   "name": "@umbrelog/sdk",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Official SDK for Umbrelog, an AI-powered Log Management Platform — structured logs, runtime interactions, and service telemetry",
   "keywords": [
     "umbrelog",
