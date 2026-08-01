@@ -1,0 +1,12 @@
+# Source and development artifacts (package.json "files" is the primary whitelist)
+src/
+tests/
+scripts/
+examples/
+*.md
+!README.md
+tsconfig.json
+.gitignore
+**/*.test.js
+**/*.test.ts
+**/*.unit.test.ts

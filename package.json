@@ -1,0 +1,70 @@
+{
+  "name": "@umbrelog/sdk",
+  "version": "2.2.1",
+  "description": "Official SDK for Umbrelog, an AI-powered Log Management Platform — structured logs, runtime interactions, and service telemetry",
+  "keywords": [
+    "umbrelog",
+    "logging",
+    "observability",
+    "structured-logging",
+    "nodejs",
+    "express",
+    "telemetry",
+    "monitoring"
+  ],
+  "homepage": "https://umbrelog.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umbrelog/node-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/umbrelog/node-sdk/issues"
+  },
+  "license": "ISC",
+  "author": "Umbrelog",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./advanced": {
+      "types": "./dist/advanced.d.ts",
+      "require": "./dist/advanced.js",
+      "default": "./dist/advanced.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test tests/*.test.js && npx tsx --test tests/lifecycle.unit.test.ts && npx tsx tests/metrics-sampler.test.ts && npx tsx tests/traffic-normalize.test.ts",
+    "verify:pack": "bash scripts/verify-pack.sh"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.0.0"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  }
+}

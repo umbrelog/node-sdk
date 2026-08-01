@@ -1,0 +1,17 @@
+{
+  "name": "umbrelog-sdk-consumer-smoke",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Temporary consumer smoke test for @umbrelog/sdk npm pack validation",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@umbrelog/sdk": "file:../.."
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
