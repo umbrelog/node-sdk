@@ -1,5 +1,7 @@
 # @umbrelog/sdk
 
+[![CI](https://github.com/umbrelog/node-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/umbrelog/node-sdk/actions/workflows/ci.yml)
+
 Official Node.js SDK for [Umbrelog](https://umbrelog.com), an AI-powered Log Management Platform — structured logging, runtime interactions, and service telemetry for production applications.
 
 Send logs from your app, attach Express and database drivers for contextual traffic, and let Umbrelog correlate events with signals and investigations in the dashboard.
@@ -35,7 +37,7 @@ npm install @umbrelog/sdk
 
 ### 4. Send your first log
 
-The SDK connects to **Umbrelog Cloud** automatically — you only need `service` and `apiKey`. **Do not set `baseUrl`.** Cloud traffic uses the same nginx routes as the web app: `POST https://app.umbrelog.com/api/logs` for ingestion and `GET https://app.umbrelog.com/config/policies` for runtime policy.
+The SDK connects to **Umbrelog Cloud** automatically — you only need `service` and `apiKey`. **Do not set `baseUrl`.**
 
 Create `first-log.js` (or use TypeScript with the same shape):
 
@@ -229,9 +231,12 @@ Full field glossary, attach/wrap patterns, and FAQ: **[EXECUTION_CONTEXT.md](./E
 
 ## Documentation
 
+- Product docs: [umbrelog.com/docs](https://umbrelog.com/docs)
+- Pricing: [umbrelog.com/pricing](https://umbrelog.com/pricing)
+- Interactive demo: [app.umbrelog.com/demo-site](https://app.umbrelog.com/demo-site)
 - Website: [umbrelog.com](https://umbrelog.com)
 - Dashboard: [app.umbrelog.com](https://app.umbrelog.com)
-- Execution context: [EXECUTION_CONTEXT.md](./EXECUTION_CONTEXT.md)
+- Execution context (in this repo): [EXECUTION_CONTEXT.md](./EXECUTION_CONTEXT.md)
 
 ## License
 
