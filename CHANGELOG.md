@@ -2,6 +2,13 @@
 
 All notable changes to `@umbrelog/sdk` are documented here.
 
+## 2.2.2 — 2026-08-01
+
+### Changed
+
+- **npm metadata** — `repository` and `bugs` point at [umbrelog/node-sdk](https://github.com/umbrelog/node-sdk).
+- **README** — CI badge, clearer Documentation links (docs, pricing, demo); removed internal routing wording from the cloud quick start.
+
 ## 2.2.1 — 2026-08-01
 
 ### Changed
